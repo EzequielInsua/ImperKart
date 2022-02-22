@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/imperlogo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Poppins:wght@400;900&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f00b793a0.js" crossorigin="anonymous"></script>
+    <title>Imperkart | Contacto</title>
+</head>
+<body>
+    <!-- ----------------------------------- -->
+    <!-- -Comienza la CABECERA de mi pagina- -->
+    <!-- ----------------------------------- -->
+    <header class="cabecera">
+        <a href="../index.html" class="cabecera__logo">
+            <img src="../img/imperlogo.png" alt="Logo de Imperkart" class="cabecera__logo-img">
+        </a>
+        <nav class="cabecera__nav">
+            <ul class="cabecera__nav-ul">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../html/productos.html">Productos</a></li>
+                <li><a href="../html/servicios.html">Servicios</a></li>
+                <li><a href="../html/nosotros.html">Nosotros</a></li>
+                <li><a class="enlace__activo" href="../html/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ------------------------------------ -->
+    <!-- -Comienza el CONTENIDO de mi pagina- -->
+    <!-- ------------------------------------ -->
+    <main>
+        <h1> 
+            <span>Cont</span><span class="spanRed">acto</span>
+        </h1>
+        <section class="contacto">
+            <!-- agregar la direccion al archivo donde se guardará la informacion del formulario -->
+            <fieldset >
+                <legend class="contacto__legend">Formulario de Contacto</legend>
+                    <form action="#" class="formulario"> 
+                        <div>
+                            <label for="nombreUsuario">Nombre</label>
+                            <input type="text" placeholder="Nombre" id="nombreUsuario">
+                        </div>
+                        <div>
+                            <label for="apellidoUsuario">Apellido</label>
+                            <input type="text" placeholder="Apellido" id="apellidoUsuario">
+                        </div>
+                        <div>
+                            <label for="MailUsuario">Mail</label>
+                            <input type="email" placeholder="Mail" id="MailUsuario">
+                        </div>
+                        <div>
+                            <label for="TelefonoUsuario">Telefono</label>
+                            <input type="tel" placeholder="Telefono" id="TelefonoUsuario">
+                        </div>
+                        <div class="fila">
+                            <label for="ComentarioUsuario">Contacto</label>
+                            <textarea  name="Comentario" id="ComentarioUsuario" placeholder = "Escribí aquí tu mensaje" rows="3"></textarea>
+                        </div>
+                        <div class="fila">
+                            <button  type="submit">Enviar</button>
+                        </div>
+                    </form>
+            </fieldset>
+        </section>
+        <section class="contacto__contenido">
+            <h2 class="contacto__contenido-h2"> informacion de Contacto</h2>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i>  José Mármol 229, Río Cuarto, Córdoba</li>
+                <li><i class="fas fa-envelope-open-text"></i> mail: imperkart@imper.com.ar</li>
+                <li><i class="fas fa-phone"></i>  123456789</li>
+                <li><i class="fa-brands fa-whatsapp"></i> 353456789</li>
+            </ul>
+            <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3342.1199098252373!2d-64.37518948486661!3d-33.105931280874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d20057861c85f5%3A0xa385dca73f873872!2zSm9zw6kgTcOhcm1vbCAyMjksIFLDrW8gQ3VhcnRvLCBDw7NyZG9iYQ!5e0!3m2!1ses!2sar!4v1643321449644!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section>
+            <h2 class="contacto__contenido-h2">Seguinos en las Redes Sociales</h2>
+            <div class="contacto__rrss">
+                <a href=https://www.instagram.com/imperkart/> <img class="contacto__rrss_img" src="../iconos/instagram.png" alt="instagram Imperkart"></a>
+                <a href="https://www.facebook.com/imperkartrioiv"><img class="contacto__rrss_img" src="../iconos/facebook.png" alt="Facebook Imperkart"></a>
+                <a href="#"><img class="contacto__rrss_img" src="../iconos/whatsapp.png" alt="Whatsapp Imperkart"></a>
+            </div>
+        </section>
+    </main>
+    <!-- --------------------------- -->
+    <!-- -Comienza el PIE de pagina- -->
+    <!-- --------------------------- -->
+    <footer>
+        <nav class="footer__nav">
+            <ul class="footer__nav-ul">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../html/productos.html">Productos</a></li>
+                <li><a href="../html/servicios.html">Servicios</a></li>
+                <li><a href="../html/nosotros.html">Nosotros</a></li>
+                <li><a href="../html/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="rrss">
+            <a href=https://www.instagram.com/imperkart/> <img class="rrss_img" src="../iconos/instagram.png" alt="instagram Imperkart"></a>
+            <a href="https://www.facebook.com/imperkartrioiv"><img class="rrss_img" src="../iconos/facebook.png" alt="Facebook Imperkart"></a>
+            <a href="#"><img class="rrss_img" src="../iconos/whatsapp.png" alt="Whatsapp Imperkart"></a>
+        </div>
+    </footer>
+</body>
+</html>
