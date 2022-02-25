@@ -55,6 +55,7 @@ main{
     margin:0 7%;
 }
 h1{
+    font-family: guitaluevo;
     color: #fff;
     font-size: 1.2rem;
     text-align: center;
@@ -104,7 +105,7 @@ h2 span{
     margin-left: 7%;
 }
 .cabecera__logo-img{
-    width: 50px;
+    width: 65px;
 }
 .cabecera__nav{
     margin-right: 7%;
@@ -173,7 +174,7 @@ h2 span{
     position: relative;
     bottom: 9rem;
     z-index: 11;
-    width: 20rem;
+    width: 10rem;
 }
 #bienvenida-h1{
     position: relative;
