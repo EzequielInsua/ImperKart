@@ -35,7 +35,7 @@
     font-size: 1rem;
     text-decoration: none;
     list-style-type: none;
-    transition: .2s linear;
+    transition: .4s linear;
     box-sizing: border-box;
 }
 body{
@@ -55,12 +55,12 @@ main{
     margin:0 7%;
 }
 h1{
-    font-family: guitaluevo;
+    font-family: guitaluevo;  
     color: #fff;
     font-size: 1.2rem;
     text-align: center;
     z-index: 100;
-    padding-bottom: 3.5rem;
+    padding-bottom: 1rem;
 }
 h1 span{
     font-family: guitaluevo;
@@ -75,8 +75,10 @@ h1 span{
 }
 h2 {
     font-size: 2.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
+    font-weight:bold;
+
 }
 h2 span{
     font-size: 2.5rem;
@@ -96,9 +98,6 @@ h2 span{
     margin-bottom: 3rem;
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
     z-index: 1000;
 }
 .cabecera__logo{
@@ -107,35 +106,24 @@ h2 span{
 .cabecera__logo-img{
     width: 65px;
 }
-.cabecera__nav{
+.navbar-nav{
     margin-right: 7%;
-    background-color: #101010;
+    background-color: var(--bgCabecera);
     border: var(--border);
-    padding: 18px;
+    text-align: center;
+    padding: 8px 20px;
     border-radius: 200px;
     box-shadow: var(--box-shadow);
 }
-.cabecera__nav ul{
-    display: flex;
-}
-.cabecera__nav ul li a{
-    margin: 0 1rem;
+.cabecera__nav li a{
     font-size: 1rem;
     text-transform: uppercase;
 }
-.cabecera__nav ul li a:hover{
+.cabecera__nav li a:hover{
     color:var(--colorPrincipal);
     font-weight: bold;
-    border-bottom: .1rem solid var(--colorPrincipal);
-    padding-bottom: .5rem;
-}
-.cabecera__nav ul li a:active{
-    font-weight: bold;
-    border-bottom: .15rem solid var(--colorPrincipal);
-    padding-bottom: .5rem;
 }
 .enlace__activo{
-    /* color:var(--colorPrincipal); */
     font-weight: bold;
     border-bottom: .1rem solid var(--colorPrincipal);
     padding-bottom: .5rem;
@@ -198,7 +186,7 @@ h2 span{
     box-shadow:var(--box-shadow);
 }
 .nosotros__imagen{
-    flex:1 1 40rem;
+    flex:1 1 20rem;
     padding:2rem;
 }
 .nosotros__imagen img{
@@ -230,24 +218,30 @@ h2 span{
 ----------------------------------------- */
 .productos{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 20rem));
     gap:1.5rem;
     margin-bottom: 50px;
+    align-items:flex-start;
 }
 .productos__h2{
     grid-column-start: 1;
-    grid-column-end: foo;
+    grid-column-end: 7;
 }
 .tarjeta{
     background-image: linear-gradient(163deg, #df0101 0%, #fb0000 100%);
     border-radius: 20px;
     transition: all .3s;
+    max-width: 20rem;
+    height: 25rem;
 }
 .tarjeta2{
     background-color: #1a1a1a;
     border-radius: 20px;
     text-align: center;
     min-width: 16rem;
+    max-width: 20rem;
+    height: 25rem;
+
 }
 .tarjeta:hover {
     box-shadow: 0px 0px 30px 1px rgba(250, 0, 0, 0.1383);
@@ -256,17 +250,15 @@ h2 span{
     transform: scale(0.98);
     border-radius: 20px;
 }
-.tarjeta__imagen{
+.carousel-item{
+    height: 25rem;
+}
+.d-block{
     background-color: white;
     border-radius: 20px 20px 0 0;
-    height: 13rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.tarjeta__imagen img{
-    width: 16rem;
-    object-fit: cover;
+    object-fit: scale-down;
+    height: 18rem;
+
 }
 .tarjeta__descripcion p{
     font-size: 1.2rem;
@@ -303,7 +295,7 @@ fieldset{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background: var(--ColorTerciario);
     border-radius: 10px;
     
@@ -421,61 +413,14 @@ footer{
 /* ----------------------------------------- 
 ----------------------Responsive------------
 ------------------------------------------ */
-@media screen and (max-width:800px){
-    .cabecera{
-        flex-direction: column;
-        height: 200px;
-    }
-    #cabecera_index{
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 200px;
-    }
-    .cabecera__logo{
-        margin:15px 0;
-    }
-    .cabecera__nav{
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        width: 100%;
-        background-color: transparent;
-        border-radius: 0%;
-    }
-    .cabecera__nav ul{
-        flex-direction: column;
-        align-items: center;
-    }
-    .cabecera__nav ul li a{
-        width: 100%;
-    }
-    #bienvenida-h1{
-        position: relative;
-        bottom: -3rem;
-        width: 500px;
-    }
-    .bienvenida img{
-        width: 15rem;
+@media screen and (max-width:756px){
+    .navbar-nav{
+        background-color: black;
+        border-radius: 5px;
     }
     .enlace__activo{
         color: var(--colorPrincipal);
         border-bottom: none;
-    }
-    .cabecera__nav ul li a:hover{
-        color:var(--colorPrincipal);
-        font-weight: bold;
-        border-bottom: none;
-        padding-bottom: .5rem;
-    }
-    .cabecera__nav ul li a:active{
-        font-weight: bold;
-        border-bottom: none;
-        padding-bottom: .5rem;
-    }
-    h2{
-        padding-top: 3rem;
     }
     .nosotros__imagen{
         width: 100%;

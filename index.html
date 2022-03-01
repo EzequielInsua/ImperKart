@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Logo -->
-    <link rel="shortcut icon" href="./img/K_LOGO_VERTICAL_FONDO_TRANSPARENTE.png">
-        <!-- BOOTSTRAP -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    <link rel="shortcut icon" href="./img/logo/K_LOGO_VERTICAL_FONDO_TRANSPARENTE.png">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- fuentes de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,30 +15,56 @@
     <!-- animaciones al inicio de la pagina -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/8f00b793a0.js" crossorigin="anonymous"></script>
-    <!-- animaciones al scrollear -->
+    <!-- Animaciones Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- hoja de estilos -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Titulo -->
-    <title>Imperkart</title>
+    <title>Imper Kart</title>
 </head>
-<body>
+<body class="body">
     <!-- ----------------------------------- -->
     <!-- -Comienza la CABECERA de mi pagina- -->
     <!-- ----------------------------------- -->
-    <header class="cabecera" id="cabecera_index">
-        <a class="cabecera__logo animate__animated animate__backInLeft" href="./index.html">
-            <img src="./img/K_LOGO_VERTICAL_B_FONDO_TRANSPARENTE.png" alt="Logo de Imperkart" class="cabecera__logo-img">
-        </a>
-        <nav class="cabecera__nav">
-            <ul class="cabecera__nav-ul">
-                <li><a class="enlace__activo" href="./index.html">Inicio</a></li>
-                <li><a href="./html/productos.html">Productos</a></li>
-                <li><a href="./html/servicios.html">Servicios</a></li>
-                <li><a href="./html/nosotros.html">Nosotros</a></li>
-                <li><a href="./html/contacto.html">Contacto</a></li>
-            </ul>
+    <header class="cabecera">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-fluid">
+                <a class="cabecera__logo navbar-brand" href="./index.html">
+                    <img class="cabecera__logo-img" src="./img/logo/K_LOGO_VERTICAL_B_FONDO_TRANSPARENTE.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="color: aqua;"></span>
+                </button>
+                <div class="nav collapse navbar-collapse justify-content-end navi" id="navbarSupportedContent">
+                    <ul class="cabecera__nav navbar-nav navi">
+                        <li class=".enlace__activo nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./html/productos.html">Todos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Chasis</a></li>
+                                <li><a class="dropdown-item" href="#">Carrocería</a></li>
+                                <li><hr class="dropdown-divider-dark"></li>
+                                <li><a class="dropdown-item" href="#">Motor</a></li>
+                                <li><a class="dropdown-item" href="#">Frenos</a></li>
+                                <li><a class="dropdown-item" href="#">Llantas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./html/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <div class="bienvenida">
@@ -57,52 +82,226 @@
     <!-- -Comienza el CONTENIDO de mi pagina- -->
     <!-- ------------------------------------ -->
     <main class="mainIndex">
-    <!--PRODUCTOS DESTACADOS -- Un resumen de lo que se encuentra en la Pagina Productos -->
-        
-        <section class="productos" data-aos="fade-left">
-            <h2 class="productos__h2"  id="productos">Productos <span>Destacados</span></h2>
-            <div class="tarjeta">
-                <div class="tarjeta2">
-                    <div class="tarjeta__imagen">
-                        <img src="./img/Trompa_tierra_2012_negra.jpg" alt="Trompa para Tierra 2012 - Negra" width="400">
-                    </div>
-                    <div class="tarjeta__descripcion">
-                        <p>Trompa para Tierra 2012</p>
-                    </div>
-                    <div class="tarjeta__iconos">
-                        <a href="#" class="fas fa-shopping-cart"></a>
-                        <a href="#" class="fas fa-heart"></a>
-                        <a href="#" class="fas fa-eye"></a>
+    <!--PRODUCTOS DESTACADOS -- Un resumen de lo que se encuentra en la Pagina Productos -->   
+        <section data-aos="fade-left"> 
+            <h2 class="productos__h2">Productos <span>Destacados</span></h2>
+            <div class="productos">
+                <div class="tarjeta">
+                    <div class="tarjeta2">
+                        <div id="Corbata_2020" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/corbata/Corbata_2020_Blanca.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2020 - azul</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/corbata/Corbata_2020_Roja.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2020 - Blanco</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#Corbata_2020" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#Corbata_2020" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="tarjeta">
-                <div class="tarjeta2">
-                    <div class="tarjeta__imagen">
-                        <img src="./img/Trompa_tierra_2015_negra.jpg" alt="Trompa para Tierra 2015 - Negra" width="400">
-                    </div>
-                    <div class="tarjeta__descripcion">
-                        <p>Trompa para Tierra 2015</p>
-                    </div>
-                    <div class="tarjeta__iconos">
-                        <a href="#" class="fas fa-shopping-cart"></a>
-                        <a href="#" class="fas fa-heart"></a>
-                        <a href="#" class="fas fa-eye"></a>
+                <div class="tarjeta">
+                    <div class="tarjeta2">
+                        <div id="Corbata_2014" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/corbata/Corbata_2014_azul.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2014 - azul</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/corbata/Corbata_2014_blanco.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2014 - Blanco</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/corbata/Corbata_2014_roja.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2014 - Roja</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/corbata/Corbata_2014_negro.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2014 - Negra</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#Corbata_2014" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#Corbata_2014" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="tarjeta">
-                <div class="tarjeta2">
-                    <div class="tarjeta__imagen">
-                        <img src="./img/Trompa_tierra_2020_negra.jpg" alt="Trompa para Tierra 2020 - Negra" width="400">
+                <div class="tarjeta">
+                    <div class="tarjeta2">
+                        <div id="Corbata_2012" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/corbata/Corbata_2012_azul.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2012 - azul</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/corbata/Corbata_2012_blanca.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2012 - Blanco</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/corbata/Corbata_2012_rojo.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2012 - Roja</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/corbata/Corbata_2012_negro.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Corbata 2012 - Negra</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#Corbata_2012" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#Corbata_2012" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="tarjeta__descripcion">
-                        <p>Trompa para Tierra 2020</p>
-                    </div>
-                    <div class="tarjeta__iconos">
-                        <a href="#" class="fas fa-shopping-cart"></a>
-                        <a href="#" class="fas fa-heart"></a>
-                        <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta2">
+                        <div id="Trompa_tierra_2015" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../img/Trompa/Trompa_tierra_2015_amarilla.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Trompa para Tierra 2015 - Amarilla</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/Trompa/Trompa_tierra_2015_negra.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Trompa para Tierra 2015 - Negra</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/Trompa/Trompa_tierra_2015_blanca.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Trompa para Tierra 2015 - Blanca</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../img/Trompa/Trompa_tierra_2015_roja.jpg" class="d-block w-100" alt="...">
+                                    <div class="tarjeta__descripcion">
+                                        <p>Trompa para Tierra 2015 - Roja</p>
+                                    </div>
+                                    <div class="tarjeta__iconos">
+                                        <a href="#" class="fas fa-shopping-cart"></a>
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="fas fa-eye"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#Trompa_tierra_2015" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#Trompa_tierra_2015" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,7 +327,7 @@
                 <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ut doloremque rerum a sed id iste necessitatibus qui quis? Aut distinctio deleniti est saepe iusto qui quos autem cupiditate nobis.</p> -->
             </div>
             <div  class="nosotros__imagen">
-                <img src="./img/perfil1.jpg" alt="Imagen de nuestra empresa">
+                <img src="./img/logo/IMPERKART _FONDO ROJO-REDES.png" alt="Imagen de nuestra empresa">
             </div>
         </section>
     </main>
@@ -151,8 +350,11 @@
             <a href="#"><img class="rrss_img" src="iconos/whatsapp.png" alt="Whatsapp Imperkart"></a>
         </div>
     </footer>
+    <!-- Animaciones Scroll -->
     <script>
         AOS.init();
     </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
