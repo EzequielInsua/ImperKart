@@ -5,9 +5,9 @@
 :root{
     --colorPrincipal: rgb(255, 0, 47);
     --colorSecundario: rgb(123,0,24);
-    --ColorTerciario: rgb(19, 19, 19);
+    --ColorTerciario: rgb(10, 10, 10);
     --ColorTexto: #fffbed;
-    --bg: rgb(40,40,40);
+    --bg: rgb(22, 22, 22);
     --bgCabecera:rgba(10, 10, 10, 0.5);
     --bgSeccion: rgb(22, 22, 22);
     --border:.05rem solid rgba(255, 255, 255, 0.1);
@@ -179,18 +179,22 @@ h2 span{
 ----------------------------------------- */
 .nosotros{
     display: flex;
+    justify-content: center;
     align-items: center;
+
     flex-wrap: wrap;
-    margin-top: 70px;
     background-color: var(--bgSeccion);
     box-shadow:var(--box-shadow);
 }
 .nosotros__imagen{
     flex:1 1 20rem;
-    padding:2rem;
+    max-width: 600px;
+    /* padding:2rem; */
+    background-color: var(--colorPrincipal);
 }
 .nosotros__imagen img{
     width: 100%;
+
 }
 .nosotros__contenido{
     flex:1 1 40rem;
@@ -216,9 +220,61 @@ h2 span{
 /* ----------------------------------------- 
 ---------- Estilos de Productos-------------
 ----------------------------------------- */
+.SeccionProductos{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.categoria{
+    width: 25%;
+    margin-right: 50px;
+    
+}
+.categoria .dropdown-item{
+    color: rgb(150, 150, 150);
+    border-radius: 250px;
+}
+.categoria #navbarDropdown{
+    color: rgb(150, 150, 150);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.categoria #navbarDropdown:hover{
+    color: rgb(255, 255, 255);
+    background-color: var(--colorPrincipal);
+    border-radius: 250px;
+}
+.categoria #navbarDropdown:focus{
+    color: rgb(255, 255, 255);
+    background-color: var(--colorPrincipal);
+    border-radius: 250px;
+}
+.categoria .dropdown-item:hover{
+    background-color: var(--colorPrincipal);
+    color: #fff;
+    border-radius: 250px;
+}
+.categoria .dropdown-menu .dropdown-item:hover{
+    width: 100%;
+    background-color: var(--colorPrincipal);
+    color: #fff;
+    border-radius: 250px;
+}
+/* .categoria .nav-item{
+    margin-left: 20px;
+} */
+#menu__categ{
+    position: static !important;
+    transform: none !important;
+    margin-left: 20px !important;
+    background-color: var(--bg);
+}
+.ContedorProductos{
+    width: 75%;
+}
 .productos{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 20rem));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 16rem));
     gap:1.5rem;
     margin-bottom: 50px;
     align-items:flex-start;
@@ -231,16 +287,15 @@ h2 span{
     background-image: linear-gradient(163deg, #df0101 0%, #fb0000 100%);
     border-radius: 20px;
     transition: all .3s;
-    max-width: 20rem;
-    height: 25rem;
+    max-width: 15rem;
+    height: 20rem;
 }
 .tarjeta2{
     background-color: #1a1a1a;
     border-radius: 20px;
     text-align: center;
-    min-width: 16rem;
-    max-width: 20rem;
-    height: 25rem;
+    max-width: 15rem;
+    height: 20rem;
 
 }
 .tarjeta:hover {
@@ -251,13 +306,13 @@ h2 span{
     border-radius: 20px;
 }
 .carousel-item{
-    height: 25rem;
+    height: 20rem;
 }
 .d-block{
     background-color: white;
     border-radius: 20px 20px 0 0;
     object-fit: scale-down;
-    height: 18rem;
+    height: 15rem;
 
 }
 .tarjeta__descripcion p{
@@ -280,15 +335,28 @@ h2 span{
 ---------- Estilos de Servicios-------------
 ----------------------------------------- */
 .servicio__video{
-    width: 100%;
+    width: 70%;
     margin: 30px 0;
 }
 
 /* -----------------------------------------------
 ---------------- Estilo de Contacto---------------
 -------------------------------------------------- */
+.PreguntasFrecuentes{
+    margin-bottom: 50px;
+}
+.PreguntasFrecuentes__contenedor > *{
+    background-color: var(--ColorTerciario);
+}
+.accordion-button{
+    background-color: var(--colorPrincipal);
+    border-radius: 10px !important;
+    color: white;
+}
+
 legend{
     font-size: 1.5rem;
+    margin-top: 150px;
 }
 fieldset{
     box-shadow:var(--box-shadow);
@@ -304,7 +372,7 @@ fieldset{
 .contacto__legend{
     font-size: 2rem;
     margin: 0 1rem;
-    text-align: center;
+    /* text-align: center; */
     text-transform: uppercase;
 }
 .formulario > *{
@@ -375,7 +443,7 @@ fieldset{
 /* ----------------------------------------- 
 --------Estilos de Pie de Pagina------------
 ------------------------------------------ */
-footer{
+.footer{
     width: 100%;
     height: 120px;
     margin-top: 9rem;
@@ -409,7 +477,44 @@ footer{
     width: 50px;
     padding: 10px;
 }
-
+.footer__creador{
+    text-align: center;
+}
+.footer__diseñador{
+    color: rgb(130,130,160);
+    background-color: var(--bgCabecera);
+    padding: 0.8rem 0;
+}
+.footer__diseñador span{
+    text-align: center;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: guitaluevo;
+    font-weight:100;
+    padding: 0 3px;
+}
+.footer__linke{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: roboto;
+    font-weight:100;
+    padding: 0 3px;
+}
+.footer__linke:hover{
+    text-align: center;
+    font-size: 0.9rem;
+    color: Var(--colorPrincipal);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: roboto;
+    font-weight:100;
+    padding: 0 3px;
+}
 /* ----------------------------------------- 
 ----------------------Responsive------------
 ------------------------------------------ */
@@ -422,6 +527,9 @@ footer{
         color: var(--colorPrincipal);
         border-bottom: none;
     }
+    .SeccionProductos{
+        flex-direction: column;
+    }
     .nosotros__imagen{
         width: 100%;
         object-fit: cover;
@@ -431,7 +539,7 @@ footer{
         width: 100%;
         padding: 2rem;
     }
-    footer{
+    .footer{
         display: flex;
         flex-direction: column;
         align-items: center;
