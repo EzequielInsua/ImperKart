@@ -527,8 +527,15 @@ fieldset{
         color: var(--colorPrincipal);
         border-bottom: none;
     }
+    .categoria{
+        width: 100%;
+        margin-right: 50px;   
+    }
     .SeccionProductos{
         flex-direction: column;
+    }
+    .ContedorProductos{
+        width: 100%;
     }
     .nosotros__imagen{
         width: 100%;

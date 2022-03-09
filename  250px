@@ -1,0 +1,59 @@
+[33mcommit c5010bd6c50c8c47fec0e5a5a62ef162f12fd17e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Tue Mar 1 23:16:02 2022 -0300
+
+    V1.3 menú y carrusel con bootstrap  [solución imagenes]
+
+[33mcommit 0dd83fcc5b9262aa16822e7fa481c0e09111cc8e[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Tue Mar 1 23:10:41 2022 -0300
+
+    V1.3 menú y carrusel con bootstrap
+
+[33mcommit 3e8f69220333d73886a10be44df150ebee2d1446[m
+Author: EzequielInsua <100242758+EzequielInsua@users.noreply.github.com>
+Date:   Tue Mar 1 23:06:36 2022 -0300
+
+    Delete img directory
+
+[33mcommit 4641c97a3ef46d7ceab0130eb33d382a1032a49d[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Tue Mar 1 22:53:47 2022 -0300
+
+    V1.3 Solucionado el problema con las imagenes (mayusculas y minusculas)
+
+[33mcommit c5b33c267cfac6c2c4ed1fd4000d5c1381476596[m[33m ([m[1;31morigin/rama_animaciones[m[33m)[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Tue Mar 1 21:39:16 2022 -0300
+
+    V1.2 se agrega menú hamburguesa y carrusel con bootstrap
+
+[33mcommit d0cbad2276e5b228e83a4956145b2b7176d78510[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Tue Mar 1 19:53:08 2022 -0300
+
+    V1.2 se agrega menú hamburguesa y carrusel con bootstrap
+
+[33mcommit 6aff41aecf16d0f831809a6163efeb01ead9681d[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Tue Mar 1 19:43:48 2022 -0300
+
+    V1.2 se agrega menú hamburguesa y carrusel con bootstrap
+
+[33mcommit f7692057f90ad0009baf9c00d8adf63127b089b1[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Fri Feb 25 09:39:09 2022 -0300
+
+    V1.1 - Se agrega animaciones y transiciones, se cambia logo institucional
+
+[33mcommit 0a142d652d6709a3b9c2af47db9443cc40a6348b[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Fri Feb 25 08:44:27 2022 -0300
+
+    V1.1 - Se agrega animaciones y transiciones, se cambia logo institucional
+
+[33mcommit 80c4db325c994ecda2085c4f45e31d0b27cb181b[m
+Author: Ezequiel Insua <insua.eze@gmail.com>
+Date:   Tue Feb 22 20:45:10 2022 -0300
+
+    V1.0 - Pagina con Responsive en flex y grid
