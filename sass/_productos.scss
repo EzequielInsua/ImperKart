@@ -1,0 +1,102 @@
+// ---------------------------------
+// --- Estilos de Productos --------
+// ---------------------------------
+
+.productos{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    &__categoria{
+        width: 25%;
+        margin-right: 50px;
+        .dropdown-item{
+            color: rgb(150, 150, 150);
+            border-radius: 250px;
+            &:hover{
+                background-color: $colorPrincipal;
+                color: #fff;
+                border-radius: 250px;
+            }
+        }
+        #navbarDropdown{
+            color: rgb(150, 150, 150);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            &:hover{
+                color: rgb(255, 255, 255);
+                background-color: $colorPrincipal;
+                border-radius: 250px;
+            }
+            &:focus{
+                color: rgb(255, 255, 255);
+                background-color: $colorPrincipal;
+                border-radius: 250px;
+            }
+        }
+        #menu__categ{
+            position: static !important;
+            transform: none !important;
+            margin-left: 20px !important;
+            background-color: $bg;
+        }
+    }
+    &__listado{
+        width: 75%;
+        &__h2{
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+        &-estructura{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 16rem));
+            gap:1.5rem;
+            margin-bottom: 50px;
+            align-items:flex-start;
+            .tarjeta{
+                background-image: linear-gradient(163deg, #df0101 0%, #fb0000 100%);
+                border-radius: 20px;
+                transition: all .3s;
+                max-width: 15rem;
+                height: 23rem;
+                &:hover {
+                    box-shadow: 0px 0px 30px 1px rgba(250, 0, 0, 0.1383);
+                }
+                .tarjeta2{
+                    background-color: #1a1a1a;
+                    border-radius: 20px;
+                    text-align: center;
+                    max-width: 15rem;
+                    height: 23rem;
+                    &:hover {
+                        transform: scale(0.98);
+                        border-radius: 20px;
+                    }
+                    .d-block{
+                        background-color: white;
+                        border-radius: 20px 20px 0 0;
+                        object-fit: scale-down;
+                        height: 15rem;
+                    }
+                    .carousel-item{
+                        .tarjeta__descripcion p{
+                            font-size: 1.2rem;
+                        }
+                        .tarjeta__iconos a{
+                            height: 2rem;
+                            width: 2rem;
+                            line-height: 2rem;
+                            font-size: 1rem;
+                            border:$border;
+                            color:#fff;
+                            margin:.3rem;
+                            &:hover{
+                                background:$colorPrincipal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

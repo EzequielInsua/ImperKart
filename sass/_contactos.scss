@@ -1,0 +1,102 @@
+// -----------------------------------
+// -------- Estilo de Contacto -------
+// -----------------------------------
+
+.PreguntasFrecuentes{
+    margin-bottom: 50px;
+}
+.PreguntasFrecuentes__contenedor > *{
+    background-color: $ColorTerciario;
+}
+.accordion-button{
+    background-color: $colorPrincipal;
+    border-radius: 10px !important;
+    color: white;
+}
+
+legend{
+    font-size: 1.5rem;
+    margin-top: 150px;
+}
+fieldset{
+    box-shadow:$box-shadow;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    background: $ColorTerciario;
+    border-radius: 10px;
+    
+    
+}
+.contacto__legend{
+    font-size: 2rem;
+    margin: 0 1rem;
+    /* text-align: center; */
+    text-transform: uppercase;
+}
+.formulario > *{
+    padding: 1rem ;
+
+}
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.fila{
+    grid-column: 1 / 3;
+}
+.formulario div{
+    margin: 0;
+    padding: 1rem 2rem 1rem 2rem;
+}
+.formulario input,
+.formulario button,
+.formulario textarea{
+    width: 100%;
+    padding: .7rem;
+    border: none;
+    background: none;
+    resize: none;
+    border-bottom: 1px solid rgb(151, 0, 0);
+}
+.formulario button{
+    background: $colorPrincipal;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.formulario button:hover,
+.formulario button:focus{
+    background-color: #d63031;
+    color: black;
+}
+.contacto__contenido-h2{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 7rem 0 1rem 0;
+}
+.maps{
+    width: 100%;
+    height: 300px;
+}
+.contacto__contenido ul{
+    font-size: 1.3rem;
+}
+.contacto__rrss{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.contacto__rrss_img{  
+    background: $colorPrincipal;
+    width: 200px;
+}
+.contacto__rrss_img:hover{  
+    background: $colorSecundario;
+    width: 200px;
+}

@@ -1,0 +1,62 @@
+// ------------------------------------- 
+// ----Estilos generales a la pagina----
+// -------------------------------------
+*{
+    font-family: 'Roboto', sans-serif;
+    color:$ColorTexto;
+    margin: 0; padding: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    list-style-type: none;
+    transition: .4s linear;
+    box-sizing: border-box;
+}
+body{
+    background: $bg;
+}
+html::-webkit-scrollbar{
+    width: .5rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: $ColorTexto;
+    border-radius: .5rem;
+}
+main{
+    margin:0 7%;
+}
+
+h1{
+    font-family: guitaluevo;  
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    z-index: 100;
+    padding-bottom: 1rem;
+}
+h1 span{
+    font-family: guitaluevo;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+.spanRed{
+    font-family: guitaluevo;
+    color: $colorPrincipal;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight:bold;
+
+}
+h2 span{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    color: $colorPrincipal;
+}

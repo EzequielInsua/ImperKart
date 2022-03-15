@@ -1,0 +1,41 @@
+// ---------------------------------- 
+// ---- Estilos de Nosotros ---------
+// ----------------------------------
+.nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $bgSeccion;
+    box-shadow:$box-shadow;
+    &__imagen{
+        flex:1 1 20rem;
+        max-width: 600px;
+        /* padding:2rem; */
+        background-color: $colorPrincipal;
+    }
+    &__imagen img{
+        width: 100%;
+    }
+    &__contenido{
+        flex:1 1 40rem;
+        padding:2rem;
+    }
+    &__contenido-h2 {
+        font-size: 2.5rem;
+        /* margin: 1rem 0; */
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__contenido-h2 span{
+        font-size: 2.5rem;
+        margin: 1rem 0;
+        text-transform: uppercase;
+        color: $colorPrincipal;
+    }
+    &__contenido p{
+        font-size: 1.3rem;
+        padding:1rem 0;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,168 @@
+// ----------------------------------
+// ----Estilos de Pie de Pagina------
+// ----------------------------------
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 7%;
+    background-color: $ColorTerciario;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .sec{
+            margin-right: 30px;
+        }
+        h2{
+            position: relative;
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: none;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                width: 50px;
+                height: 2px;
+                background-color: $colorPrincipal;
+            }
+        }
+        &__nosotros{
+            width: 40%;
+            p{
+                color: #999;
+            }
+            .sci{
+                margin-top: 20px;
+                display: flex;
+                li {
+                    list-style: none;
+                    a {
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        background: #222;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        text-decoration: none;
+                        border-radius: 4px;
+                        &:hover{
+                            background: $colorPrincipal;
+                        }
+                        .fa{
+                            color: #fff;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &__links_utiles{
+            position: relative;
+            width: 25%;
+            ul li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: #999;
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            } 
+        }
+        &__contacto{
+            width: calc(35%- 60px);
+            margin-right: 0;
+            .info{
+                position: relative;
+                li{
+                    display: flex;
+                    margin-bottom: 16px;
+                    color: #999;
+                    &:hover{
+                        color: #fff;
+                    }
+                    i{
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        background: #222;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        text-decoration: none;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.footer__creador{
+    text-align: center;
+}
+.footer__diseñador{
+    color: rgb(130,130,160);
+    background-color: $bgCabecera;
+    padding: 0.8rem 0;
+    span{
+        text-align: center;
+        font-size: 1.1rem;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: guitaluevo;
+        font-weight:100;
+        padding: 0 3px;
+    }
+
+}
+
+.footer__linke{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: roboto;
+    font-weight:100;
+    padding: 0 3px;
+    :hover{
+        text-align: center;
+        font-size: 0.9rem;
+        color: $colorPrincipal;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: roboto;
+        font-weight:100;
+        padding: 0 3px;
+    }
+}
+@media (max-width:991px){
+    footer{
+        padding: 40px;
+        .contenedor{
+            flex-direction: column;
+            .sec{
+                margin-right: 0;
+                margin-bottom: 40px;
+                width: 100%;
+            }
+        }
+    }
+}
