@@ -3,7 +3,7 @@
 // ----------------------------------
 
 $colorPrincipal: rgb(255, 0, 47);
-$colorSecundario: rgb(123,0,24);
+$colorSecundario: rgb(77,77,77);
 $ColorTerciario: rgb(10, 10, 10);
 $ColorTexto: #fffbed;
 $bg: rgb(22, 22, 22);
@@ -24,3 +24,9 @@ $box-shadow:0 0 100px 0 rgba(255, 255, 255,.1);
     font-family: guitaluevo;
     src: url('../font/Gitaluevo.ttf');
 }
+
+$fuentes:(
+    fontTitulo:('guitaluevo','Roboto', sans-serif),
+    fontGeneral:('Roboto', sans-serif),
+    fontAntiguo:('rocketout','Roboto')
+);

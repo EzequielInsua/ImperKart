@@ -1,9 +1,14 @@
 // ------------------------------------- 
 // ----Estilos generales a la pagina----
 // -------------------------------------
-*{
-    font-family: 'Roboto', sans-serif;
-    color:$ColorTexto;
+// $fuentes:(
+//     fontTitulo:('guitaluevo','Roboto', sans-serif),
+//     fontGeneral:('Roboto', sans-serif),
+//     fontAntiguo:('rocketout','Roboto')
+// );
+* {
+    font-family: map-get($fuentes, fontGeneral);
+    color: $ColorTexto;
     margin: 0; padding: 0;
     font-size: 1rem;
     text-decoration: none;
@@ -29,7 +34,7 @@ main{
 }
 
 h1{
-    font-family: guitaluevo;  
+    font-family: map-get($fuentes, fontTitulo); 
     color: #fff;
     font-size: 1.2rem;
     text-align: center;
@@ -37,12 +42,12 @@ h1{
     padding-bottom: 1rem;
 }
 h1 span{
-    font-family: guitaluevo;
+    font-family: map-get($fuentes, fontTitulo); 
     font-size: 3.5rem;
     text-transform: uppercase;
 }
 .spanRed{
-    font-family: guitaluevo;
+    font-family: map-get($fuentes, fontTitulo); 
     color: $colorPrincipal;
     font-size: 3.5rem;
     text-transform: uppercase;

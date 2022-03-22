@@ -1,6 +1,25 @@
 // ----------------------------------
 // ----Estilos de Pie de Pagina------
 // ----------------------------------
+.enlace_rapido {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    &:hover{
+        background: $colorPrincipal;
+    }
+    .fa{
+        color: #fff;
+        font-size: 20px;
+    }
+}
 footer{
     position: relative;
     width: 100%;
@@ -44,26 +63,7 @@ footer{
                 display: flex;
                 li {
                     list-style: none;
-                    a {
-                        display: inline-block;
-                        width: 40px;
-                        height: 40px;
-                        background: #222;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-right: 10px;
-                        text-decoration: none;
-                        border-radius: 4px;
-                        &:hover{
-                            background: $colorPrincipal;
-                        }
-                        .fa{
-                            color: #fff;
-                            font-size: 20px;
-                        }
-                    }
-                }
+                                    }
             }
         }
         &__links_utiles{
@@ -95,16 +95,7 @@ footer{
                         color: #fff;
                     }
                     i{
-                        display: inline-block;
-                        width: 30px;
-                        height: 30px;
-                        background: #222;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-right: 10px;
-                        text-decoration: none;
-                        border-radius: 4px;
+                        @extend .enlace_rapido;
                     }
                 }
             }

@@ -6,85 +6,11 @@
 // --- Importamos Secciones ---
 
 @import "generales.scss";
+@import "boton.scss";
 @import "header.scss";
 @import "productos.scss";
 @import "nosotros.scss";
 @import "servicios.scss";
 @import "contactos.scss";
 @import "footer.scss";
-
-//---------------------------
-//-------Responsive----------
-//---------------------------
-
-@media screen and (max-width:756px){
-    .navbar-nav{
-        background-color: black;
-        border-radius: 5px;
-    }
-    .enlace__activo{
-        color: $colorPrincipal;
-        border-bottom: none;
-    }
-    .categoria{
-        width: 100%;
-        margin-right: 50px;   
-    }
-    .SeccionProductos{
-        flex-direction: column;
-    }
-    .ContedorProductos{
-        width: 100%;
-    }
-    .nosotros__imagen{
-        width: 100%;
-        object-fit: cover;
-        min-width: 200px;
-    }
-    .nosotros__contenido{
-        width: 100%;
-        padding: 2rem;
-    }
-    .contenedor{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .footer__nav{
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .footer__nav ul{
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .footer__nav ul li{
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    .footer__nav ul li a{
-        width: 100%;
-    }
-    .rrss{
-        margin:15px 0;
-        padding: auto;
-    }
-    .formulario{
-        display: flex;
-        flex-direction: column;
-    }
-    .fila{
-        grid-column: 1 / 2;
-    }
-    .contacto__rrss_img{  
-        width: 100px;
-    }
-    .contacto__rrss_img:hover{  
-        width: 100px;
-    }
-}
+@import "_mediaquery.scss";

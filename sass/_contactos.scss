@@ -84,6 +84,11 @@ fieldset{
 }
 .contacto__contenido ul{
     font-size: 1.3rem;
+    li{
+        i{
+            @extend .enlace_rapido;
+        }
+    }
 }
 .contacto__rrss{
     display: flex;

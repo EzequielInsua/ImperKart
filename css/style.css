@@ -12,7 +12,7 @@
   src: url("../font/Gitaluevo.ttf"); }
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #fffbed;
   margin: 0;
   padding: 0;
@@ -39,7 +39,7 @@ main {
   margin: 0 7%; }
 
 h1 {
-  font-family: guitaluevo;
+  font-family: "guitaluevo", "Roboto", sans-serif;
   color: #fff;
   font-size: 1.2rem;
   text-align: center;
@@ -47,12 +47,12 @@ h1 {
   padding-bottom: 1rem; }
 
 h1 span {
-  font-family: guitaluevo;
+  font-family: "guitaluevo", "Roboto", sans-serif;
   font-size: 3.5rem;
   text-transform: uppercase; }
 
 .spanRed {
-  font-family: guitaluevo;
+  font-family: "guitaluevo", "Roboto", sans-serif;
   color: #ff002f;
   font-size: 3.5rem;
   text-transform: uppercase; }
@@ -69,6 +69,7 @@ h2 span {
   text-transform: uppercase;
   color: #ff002f; }
 
+/* From cssbuttons.io by @ernestnash */
 /* --------------------------------- 
 ------ Estilos de Cabecera  --------
 --------------------------------- */
@@ -186,7 +187,7 @@ h2 span {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(10rem, 16rem));
       gap: 1.5rem;
-      margin-bottom: 50px;
+      margin-bottom: 100px;
       align-items: flex-start; }
       .productos__listado-estructura .tarjeta {
         background-image: linear-gradient(163deg, #df0101 0%, #fb0000 100%);
@@ -222,14 +223,133 @@ h2 span {
             margin: .3rem; }
             .productos__listado-estructura .tarjeta .tarjeta2 .carousel-item .tarjeta__iconos a:hover {
               background: #ff002f; }
+      .productos__listado-estructura .btn {
+        display: inline-block;
+        padding: 0.9rem 1.8rem;
+        font-size: 16px;
+        font-weight: 700;
+        color: #fffbed;
+        border: 3px solid #ff002f;
+        cursor: pointer;
+        position: relative;
+        background-color: transparent;
+        text-decoration: none;
+        overflow: hidden;
+        z-index: 1;
+        font-family: inherit; }
+        .productos__listado-estructura .btn::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          color: #fffbed;
+          background-color: #ff002f;
+          transform: translateX(-100%);
+          transition: all .3s;
+          z-index: -1; }
+        .productos__listado-estructura .btn:hover::before {
+          transform: translateX(0); }
 
-.nosotros {
+#nuestra__historia {
+  display: flex;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  margin-bottom: 100px; }
+  #nuestra__historia .nh_item {
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    width: 25%;
+    height: 70vh;
+    min-height: 600px;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.5s ease;
+    border-radius: 10px; }
+    #nuestra__historia .nh_item:before, #nuestra__historia .nh_item:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+    #nuestra__historia .nh_item:after {
+      background: rgba(10, 10, 10, 0.35);
+      opacity: 1;
+      transition: opacity 0.5s ease; }
+    #nuestra__historia .nh_item:before {
+      background: linear-gradient(to bottom, black 10%, rgba(0, 0, 0, 0.8) 40%);
+      z-index: 1;
+      opacity: 0;
+      transform: translate3d(0, 0, 0) translateY(50%);
+      transition: opacity 0.5s ease, transform 0.5s ease; }
+    #nuestra__historia .nh_item:hover {
+      width: 60%; }
+      #nuestra__historia .nh_item:hover:after {
+        opacity: 0; }
+      #nuestra__historia .nh_item:hover:before {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) translateY(0);
+        transition: opacity 1s ease, transform 1s ease 0.25s; }
+      #nuestra__historia .nh_item:hover .nh_item__contenido {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.75s ease 0.5s; }
+      #nuestra__historia .nh_item:hover .nh_item__bg {
+        filter: grayscale(0);
+        object-fit: cover; }
+      #nuestra__historia .nh_item:hover .nh_item__fecha {
+        background-color: #4d4d4d;
+        border-top: 1px solid #ff002f;
+        border-bottom: 1px solid #ff002f; }
+    #nuestra__historia .nh_item__contenido {
+      transform: translate3d(0, 0, 0) translateY(25px);
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin: 0 1.618em;
+      top: 20%;
+      opacity: 0; }
+    #nuestra__historia .nh_item__fecha {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 10%;
+      left: 50%;
+      padding: 10px;
+      border-radius: 10px;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 1;
+      background-color: #ff002f;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000; }
+      #nuestra__historia .nh_item__fecha p {
+        font-family: guitaluevo, Helvetica Neue, Helvetica, Arial, sans-serif;
+        color: #ff002f;
+        font-size: 1.728rem;
+        line-height: 0; }
+    #nuestra__historia .nh_item .nh_item__bg {
+      transform: translate3d(0, 0, 0);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center center;
+      transition: filter 0.5s ease;
+      filter: grayscale(100%); }
+
+.nosotros, .servicios {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   background-color: #161616;
-  box-shadow: 0 0 100px 0 rgba(255, 255, 255, 0.1); }
+  box-shadow: 0 0 100px 0 rgba(255, 255, 255, 0.1);
+  margin-bottom: 100px; }
   .nosotros__imagen {
     flex: 1 1 20rem;
     max-width: 600px;
@@ -240,10 +360,37 @@ h2 span {
   .nosotros__contenido {
     flex: 1 1 40rem;
     padding: 2rem; }
+    .nosotros__contenido .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      font-size: 16px;
+      font-weight: 700;
+      color: #ff002f;
+      border: 3px solid #4d4d4d;
+      cursor: pointer;
+      position: relative;
+      background-color: transparent;
+      text-decoration: none;
+      overflow: hidden;
+      z-index: 1;
+      font-family: inherit; }
+      .nosotros__contenido .btn::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: #ff002f;
+        background-color: #4d4d4d;
+        transform: translateX(-100%);
+        transition: all .3s;
+        z-index: -1; }
+      .nosotros__contenido .btn:hover::before {
+        transform: translateX(0); }
   .nosotros__contenido-h2 {
     font-size: 2.5rem;
     /* margin: 1rem 0; */
-    text-align: center;
     text-transform: uppercase; }
   .nosotros__contenido-h2 span {
     font-size: 2.5rem;
@@ -252,8 +399,41 @@ h2 span {
     color: #ff002f; }
   .nosotros__contenido p {
     font-size: 1.3rem;
-    padding: 1rem 0;
-    line-height: 1.5; }
+    padding: 0.7rem 0;
+    line-height: 1.2; }
+
+.servicios {
+  margin-bottom: 100px; }
+  .servicios .btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff002f;
+    border: 3px solid #fffbed;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit; }
+    .servicios .btn::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: #ff002f;
+      background-color: #fffbed;
+      transform: translateX(-100%);
+      transition: all .3s;
+      z-index: -1; }
+    .servicios .btn:hover::before {
+      transform: translateX(0); }
+  .servicios__contenido {
+    width: 40%; }
 
 .servicio__video {
   width: 70%;
@@ -349,8 +529,25 @@ fieldset {
   width: 200px; }
 
 .contacto__rrss_img:hover {
-  background: #7b0018;
+  background: #4d4d4d;
   width: 200px; }
+
+.enlace_rapido, .contacto__contenido ul li i, footer .contenedor__contacto .info li i {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px; }
+  .enlace_rapido:hover, .contacto__contenido ul li i:hover, footer .contenedor__contacto .info li i:hover {
+    background: #ff002f; }
+  .enlace_rapido .fa, .contacto__contenido ul li i .fa, footer .contenedor__contacto .info li i .fa {
+    color: #fff;
+    font-size: 20px; }
 
 footer {
   position: relative;
@@ -391,22 +588,6 @@ footer {
         display: flex; }
         footer .contenedor__nosotros .sci li {
           list-style: none; }
-          footer .contenedor__nosotros .sci li a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #222;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            text-decoration: none;
-            border-radius: 4px; }
-            footer .contenedor__nosotros .sci li a:hover {
-              background: #ff002f; }
-            footer .contenedor__nosotros .sci li a .fa {
-              color: #fff;
-              font-size: 20px; }
     footer .contenedor__links_utiles {
       position: relative;
       width: 25%; }
@@ -430,17 +611,6 @@ footer {
           color: #999; }
           footer .contenedor__contacto .info li:hover {
             color: #fff; }
-          footer .contenedor__contacto .info li i {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background: #222;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            text-decoration: none;
-            border-radius: 4px; }
 
 .footer__creador {
   text-align: center; }
@@ -502,6 +672,12 @@ footer {
     flex-direction: column; }
   .ContedorProductos {
     width: 100%; }
+  #nuestra__historia {
+    flex-direction: column; }
+    #nuestra__historia .nh_item {
+      width: 100%; }
+      #nuestra__historia .nh_item:hover {
+        width: 100%; }
   .nosotros__imagen {
     width: 100%;
     object-fit: cover;
