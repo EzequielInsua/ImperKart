@@ -11,6 +11,10 @@
   font-family: guitaluevo;
   src: url("../font/Gitaluevo.ttf"); }
 
+@font-face {
+  font-family: monserrat_bold;
+  src: url("../font/Montserrat-Bold.ttf"); }
+
 * {
   font-family: "Roboto", sans-serif;
   color: #fffbed;
@@ -311,6 +315,8 @@ h2 span {
       margin: 0 1.618em;
       top: 20%;
       opacity: 0; }
+      #nuestra__historia .nh_item__contenido p {
+        font-size: 1.3rem; }
     #nuestra__historia .nh_item__fecha {
       position: absolute;
       text-align: center;
@@ -342,7 +348,7 @@ h2 span {
       transition: filter 0.5s ease;
       filter: grayscale(100%); }
 
-.nosotros, .servicios {
+.nosotros, .equipo {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -350,17 +356,11 @@ h2 span {
   background-color: #161616;
   box-shadow: 0 0 100px 0 rgba(255, 255, 255, 0.1);
   margin-bottom: 100px; }
-  .nosotros__imagen {
-    flex: 1 1 20rem;
-    max-width: 600px;
-    /* padding:2rem; */
-    background-color: #ff002f; }
-  .nosotros__imagen img {
-    width: 100%; }
-  .nosotros__contenido {
+  .nosotros__contenido, .equipo__contenido {
+    width: 40%;
     flex: 1 1 40rem;
     padding: 2rem; }
-    .nosotros__contenido .btn {
+    .nosotros__contenido .btn, .equipo__contenido .btn {
       display: inline-block;
       padding: 0.9rem 1.8rem;
       font-size: 16px;
@@ -374,7 +374,7 @@ h2 span {
       overflow: hidden;
       z-index: 1;
       font-family: inherit; }
-      .nosotros__contenido .btn::before {
+      .nosotros__contenido .btn::before, .equipo__contenido .btn::before {
         content: "";
         position: absolute;
         left: 0;
@@ -386,8 +386,32 @@ h2 span {
         transform: translateX(-100%);
         transition: all .3s;
         z-index: -1; }
-      .nosotros__contenido .btn:hover::before {
+      .nosotros__contenido .btn:hover::before, .equipo__contenido .btn:hover::before {
         transform: translateX(0); }
+  .nosotros__imagen {
+    width: 50%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem; }
+    .nosotros__imagen-galeria {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 0.5rem;
+      grid-template-areas: 'logo1 logo1 logo2' 'logo3 logo4 logo2'; }
+      .nosotros__imagen-galeria .logo1 {
+        grid-area: logo1; }
+      .nosotros__imagen-galeria .logo2 {
+        grid-area: logo2; }
+      .nosotros__imagen-galeria .logo3 {
+        grid-area: logo3; }
+      .nosotros__imagen-galeria .logo4 {
+        grid-area: logo4; }
+    .nosotros__imagen img {
+      width: 100%;
+      border: 2px solid #4d4d4d;
+      padding: 5px; }
   .nosotros__contenido-h2 {
     font-size: 2.5rem;
     /* margin: 1rem 0; */
@@ -397,50 +421,25 @@ h2 span {
     margin: 1rem 0;
     text-transform: uppercase;
     color: #ff002f; }
-  .nosotros__contenido p {
+  .nosotros__contenido p, .equipo__contenido p {
     font-size: 1.3rem;
     padding: 0.7rem 0;
     line-height: 1.2; }
 
-.servicios {
+.equipo__imagen img {
+  max-width: 400px; }
+
+.servicios__contenido {
   margin-bottom: 100px; }
-  .servicios .btn {
-    display: inline-block;
-    padding: 0.9rem 1.8rem;
-    font-size: 16px;
-    font-weight: 700;
-    color: #ff002f;
-    border: 3px solid #fffbed;
-    cursor: pointer;
-    position: relative;
-    background-color: transparent;
-    text-decoration: none;
-    overflow: hidden;
-    z-index: 1;
-    font-family: inherit; }
-    .servicios .btn::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      color: #ff002f;
-      background-color: #fffbed;
-      transform: translateX(-100%);
-      transition: all .3s;
-      z-index: -1; }
-    .servicios .btn:hover::before {
-      transform: translateX(0); }
-  .servicios__contenido {
-    width: 40%; }
+  .servicios__contenido p {
+    font-size: 1.3rem; }
 
 .servicio__video {
   width: 70%;
   margin: 30px 0; }
 
 .PreguntasFrecuentes {
-  margin-bottom: 50px; }
+  margin-bottom: 100px; }
 
 .PreguntasFrecuentes__contenedor > * {
   background-color: #0a0a0a; }
@@ -460,6 +459,7 @@ fieldset {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+  margin-bottom: 100px;
   background: #0a0a0a;
   border-radius: 10px; }
 
@@ -505,18 +505,50 @@ fieldset {
   background-color: #d63031;
   color: black; }
 
-.contacto__contenido-h2 {
-  text-align: center;
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin: 7rem 0 1rem 0; }
-
-.maps {
+.informacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
-  height: 300px; }
-
-.contacto__contenido ul {
-  font-size: 1.3rem; }
+  background-color: #161616;
+  box-shadow: 0 0 100px 0 rgba(255, 255, 255, 0.1);
+  margin-bottom: 100px; }
+  .informacion__contenido {
+    width: 40%;
+    display: flex;
+    flex-direction: column; }
+    .informacion__contenido .Caja {
+      position: relative;
+      padding: 15px 0;
+      display: flex; }
+      .informacion__contenido .Caja__iconos {
+        min-width: 60px;
+        height: 60px;
+        background: #4d4d4d;
+        margin-left: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; }
+        .informacion__contenido .Caja__iconos i {
+          font-size: 30px; }
+          .informacion__contenido .Caja__iconos i:hover {
+            color: #ff002f; }
+      .informacion__contenido .Caja__texto {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        color: #fff;
+        flex-direction: column;
+        font-weight: 300; }
+        .informacion__contenido .Caja__texto h3 {
+          font-weight: 500;
+          color: #ff002f; }
+  .informacion__maps {
+    width: 60%; }
+    .informacion__maps .maps {
+      width: 100%; }
 
 .contacto__rrss {
   display: flex;
@@ -532,7 +564,7 @@ fieldset {
   background: #4d4d4d;
   width: 200px; }
 
-.enlace_rapido, .contacto__contenido ul li i, footer .contenedor__contacto .info li i {
+.enlace_rapido, footer .contenedor__contacto .info li i {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -543,9 +575,9 @@ fieldset {
   margin-right: 10px;
   text-decoration: none;
   border-radius: 4px; }
-  .enlace_rapido:hover, .contacto__contenido ul li i:hover, footer .contenedor__contacto .info li i:hover {
+  .enlace_rapido:hover, footer .contenedor__contacto .info li i:hover {
     background: #ff002f; }
-  .enlace_rapido .fa, .contacto__contenido ul li i .fa, footer .contenedor__contacto .info li i .fa {
+  .enlace_rapido .fa, footer .contenedor__contacto .info li i .fa {
     color: #fff;
     font-size: 20px; }
 
@@ -658,6 +690,71 @@ footer {
         margin-bottom: 40px;
         width: 100%; } }
 
+.clientes {
+  margin-bottom: 100px;
+  background-color: #161616;
+  box-shadow: 0 0 100px 0 rgba(255, 255, 255, 0.1);
+  padding: 2rem; }
+  .clientes .btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff002f;
+    border: 3px solid #4d4d4d;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit; }
+    .clientes .btn::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: #ff002f;
+      background-color: #4d4d4d;
+      transform: translateX(-100%);
+      transition: all .3s;
+      z-index: -1; }
+    .clientes .btn:hover::before {
+      transform: translateX(0); }
+
+.clientes__contenido p {
+  font-size: 1.3rem; }
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  height: 450px; }
+
+.swiper-slide img {
+  display: block;
+  width: 100%; }
+
+.swiper-slide video {
+  display: block;
+  width: 100%; }
+
+@media screen and (max-width: 991px) {
+  .informacion {
+    flex-direction: column; }
+    .informacion__contenido {
+      width: 100%;
+      margin-bottom: 40px; }
+    .informacion__maps {
+      width: 100%; } }
+
 @media screen and (max-width: 756px) {
   .navbar-nav {
     background-color: black;
@@ -682,7 +779,7 @@ footer {
     width: 100%;
     object-fit: cover;
     min-width: 200px; }
-  .nosotros__contenido {
+  .nosotros__contenido, .equipo__contenido {
     width: 100%;
     padding: 2rem; }
   .contenedor {

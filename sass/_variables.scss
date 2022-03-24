@@ -24,9 +24,14 @@ $box-shadow:0 0 100px 0 rgba(255, 255, 255,.1);
     font-family: guitaluevo;
     src: url('../font/Gitaluevo.ttf');
 }
+@font-face {
+    font-family: monserrat_bold;
+    src: url('../font/Montserrat-Bold.ttf');
+}
 
 $fuentes:(
     fontTitulo:('guitaluevo','Roboto', sans-serif),
     fontGeneral:('Roboto', sans-serif),
-    fontAntiguo:('rocketout','Roboto')
+    fontAntiguo:('rocketout','Roboto'),
+    fontPromo:('monserrat_bold','Roboto')
 );

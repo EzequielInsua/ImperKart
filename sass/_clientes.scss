@@ -1,0 +1,32 @@
+
+.clientes{
+    margin-bottom: 100px;
+    background-color: $bgSeccion;
+    box-shadow:$box-shadow;
+    padding:2rem;
+    .btn{
+        @include boton($colorSecundario,$colorPrincipal)
+    }
+}
+.clientes__contenido p{
+    font-size: 1.3rem;
+}
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 450px;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
+    .swiper-slide video {
+        display: block;
+        width: 100%;
+    }

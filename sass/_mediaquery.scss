@@ -2,6 +2,20 @@
 //-------Responsive----------
 //---------------------------
 
+@media screen and (max-width:991px){
+    .informacion{
+        flex-direction: column;
+        &__contenido{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        &__maps{
+            width: 100%;
+        }
+    }
+}
+
+
 @media screen and (max-width:756px){
     .navbar-nav{
         background-color: black;

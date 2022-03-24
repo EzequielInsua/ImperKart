@@ -1,14 +1,10 @@
 // ---------------------------------
 // ----- Estilos de Servicios ------
 // ---------------------------------
-.servicios{
+.servicios__contenido{
     margin-bottom: 100px;
-    @extend .nosotros;
-    .btn{
-        @include boton($ColorTexto,$colorPrincipal)
-    }
-    &__contenido{
-        width: 40%;
+    p {
+        font-size: 1.3rem;
     }
 }
 .servicio__video{
