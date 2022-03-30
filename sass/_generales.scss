@@ -29,6 +29,13 @@ html::-webkit-scrollbar-thumb{
     background: $ColorTexto;
     border-radius: .5rem;
 }
+html{
+    scrollbar-width: .3rem;
+    scrollbar-color: $ColorTexto transparent;
+    // scrollbar-border-radius: .5rem; 
+}
+
+
 main{
     margin:0 7%;
 }

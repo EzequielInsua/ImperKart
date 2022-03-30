@@ -39,6 +39,10 @@ html::-webkit-scrollbar-thumb {
   background: #fffbed;
   border-radius: .5rem; }
 
+html {
+  scrollbar-width: .3rem;
+  scrollbar-color: #fffbed transparent; }
+
 main {
   margin: 0 7%; }
 
@@ -95,7 +99,8 @@ h2 span {
     text-transform: uppercase; }
   .cabecera__nav li a:hover {
     color: #ff002f;
-    font-weight: bold; }
+    font-weight: bold;
+    background-color: black; }
 
 .navbar-nav {
   margin-right: 7%;
@@ -106,10 +111,13 @@ h2 span {
   border-radius: 200px;
   box-shadow: 0 0 100px 0 rgba(255, 255, 255, 0.1); }
 
-.enlace__activo {
-  font-weight: bold;
-  border-bottom: 0.1rem solid #ff002f;
-  padding-bottom: .5rem; }
+.dropdown-menu, .dropdown-item {
+  background-color: #161616;
+  color: #fffbed; }
+
+.badge-info {
+  color: black;
+  background-color: #ff002f; }
 
 /* --------------------------------- 
 ----- Estilos de Bienvenida --------
@@ -129,7 +137,7 @@ h2 span {
     position: absolute;
     top: 0;
     right: 0; }
-  .bienvenida__div {
+  .bienvenida__opaco {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -147,9 +155,15 @@ h2 span {
     color: #ff002f; }
 
 #bienvenida-h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   bottom: 9rem;
   width: 500px; }
+
+.productos_index {
+  margin-bottom: 100px; }
 
 .productos {
   display: flex;
@@ -157,7 +171,11 @@ h2 span {
   justify-content: center; }
   .productos__categoria {
     width: 25%;
-    margin-right: 50px; }
+    margin-right: 50px;
+    box-shadow: 0 0 100px 0 rgba(255, 255, 255, 0.1);
+    padding: 15px 10px 15px 10px;
+    border-radius: 10px;
+    margin-bottom: 100px; }
     .productos__categoria .dropdown-item {
       color: #969696;
       border-radius: 250px; }
@@ -178,9 +196,9 @@ h2 span {
         background-color: #ff002f;
         border-radius: 250px; }
     .productos__categoria #menu__categ {
-      position: static !important;
-      transform: none !important;
-      margin-left: 20px !important;
+      position: static;
+      transform: none;
+      margin-left: 20px;
       background-color: #161616; }
   .productos__listado {
     width: 75%; }
@@ -191,8 +209,10 @@ h2 span {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(10rem, 16rem));
       gap: 1.5rem;
-      margin-bottom: 100px;
-      align-items: flex-start; }
+      align-items: flex-start;
+      margin-bottom: 30px;
+      text-align: center;
+      align-items: center; }
       .productos__listado-estructura .tarjeta {
         background-image: linear-gradient(163deg, #df0101 0%, #fb0000 100%);
         border-radius: 20px;
@@ -200,9 +220,9 @@ h2 span {
         max-width: 15rem;
         height: 23rem; }
         .productos__listado-estructura .tarjeta:hover {
-          box-shadow: 0px 0px 30px 1px rgba(250, 0, 0, 0.1383); }
+          box-shadow: 0px 0px 30px 1px rgba(250, 0, 0, 0.418); }
         .productos__listado-estructura .tarjeta .tarjeta2 {
-          background-color: #1a1a1a;
+          background-color: #4d4d4d;
           border-radius: 20px;
           text-align: center;
           max-width: 15rem;
@@ -227,34 +247,35 @@ h2 span {
             margin: .3rem; }
             .productos__listado-estructura .tarjeta .tarjeta2 .carousel-item .tarjeta__iconos a:hover {
               background: #ff002f; }
-      .productos__listado-estructura .btn {
-        display: inline-block;
-        padding: 0.9rem 1.8rem;
-        font-size: 16px;
-        font-weight: 700;
-        color: #fffbed;
-        border: 3px solid #ff002f;
-        cursor: pointer;
-        position: relative;
-        background-color: transparent;
-        text-decoration: none;
-        overflow: hidden;
-        z-index: 1;
-        font-family: inherit; }
-        .productos__listado-estructura .btn::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          color: #fffbed;
-          background-color: #ff002f;
-          transform: translateX(-100%);
-          transition: all .3s;
-          z-index: -1; }
-        .productos__listado-estructura .btn:hover::before {
-          transform: translateX(0); }
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fffbed;
+  border: 3px solid #ff002f;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit; }
+  .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fffbed;
+    background-color: #ff002f;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1; }
+  .btn:hover::before {
+    transform: translateX(0); }
 
 #nuestra__historia {
   display: flex;
@@ -814,3 +835,23 @@ footer {
     width: 100px; }
   .contacto__rrss_img:hover {
     width: 100px; } }
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-2900px, 0, 0);
+    /* The image width */ } }
+
+.marcas {
+  background-color: #fff;
+  overflow: hidden; }
+  .marcas .slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    animation: slide 30s linear infinite; }
+  .marcas img {
+    height: 50px;
+    padding: 5px 50px;
+    filter: grayscale(100%); }
