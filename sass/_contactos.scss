@@ -25,7 +25,7 @@ fieldset{
     margin-right: auto;
     margin-top: 1rem;
     margin-bottom: 100px;
-    background: $ColorTerciario;
+    background: $bgSeccion;
     border-radius: 10px;
     
     
@@ -59,7 +59,7 @@ fieldset{
     border: none;
     background: none;
     resize: none;
-    border-bottom: 1px solid rgb(151, 0, 0);
+    border-bottom: 1px solid $colorPrincipal;
 }
 .formulario button{
     background: $colorPrincipal;
@@ -128,20 +128,4 @@ fieldset{
             width: 100%;
         }
     }
-}
-
-.contacto__rrss{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-.contacto__rrss_img{  
-    background: $colorPrincipal;
-    width: 200px;
-}
-.contacto__rrss_img:hover{  
-    background: $colorSecundario;
-    width: 200px;
 }

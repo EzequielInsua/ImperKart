@@ -78,6 +78,135 @@ h2 span {
   color: #ff002f; }
 
 /* From cssbuttons.io by @ernestnash */
+.tarjeta {
+  background-image: linear-gradient(163deg, #df0101 0%, #fb0000 100%);
+  border-radius: 20px;
+  transition: all .3s;
+  width: 280px;
+  height: 450px;
+  margin-bottom: 50px; }
+  .tarjeta:hover {
+    box-shadow: 0px 0px 20px 1px rgba(253, 0, 0, 0.418); }
+  .tarjeta .tarjeta2 {
+    background-color: #2e2e2e;
+    border-radius: 20px;
+    text-align: center;
+    width: 280px;
+    height: 450px; }
+    .tarjeta .tarjeta2 .carousel {
+      border-radius: 20px;
+      width: 100%;
+      height: 100%; }
+      .tarjeta .tarjeta2 .carousel:after {
+        content: 'IMPER';
+        position: absolute;
+        top: 30%;
+        left: -5%;
+        font-size: 8em;
+        font-weight: 800;
+        font-family: guitaluevo;
+        color: rgba(66, 66, 66, 0.07);
+        rotate: -45deg; }
+      .tarjeta .tarjeta2 .carousel::before {
+        border-radius: 20px;
+        content: '';
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        background-color: #fffbed;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(150px at 80% 20%);
+        transition: 0.5s ease-in-out; }
+      .tarjeta .tarjeta2 .carousel:hover::before {
+        clip-path: circle(300px at 80% -20%); }
+    .tarjeta .tarjeta2:hover {
+      transform: scale(0.99);
+      border-radius: 20px; }
+    .tarjeta .tarjeta2 .d-block {
+      object-fit: scale-down;
+      height: 15rem; }
+    .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion h2 {
+      color: #fffbed;
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-family: guitaluevo;
+      margin: 5px;
+      padding: 0; }
+    .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .precio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      color: #fffbed;
+      text-transform: uppercase;
+      font-family: roboto; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .precio h3 {
+        font-weight: 800;
+        font-size: 1.2rem;
+        margin: 5px; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .precio span {
+        font-size: 1rem;
+        margin: 5px;
+        color: #111;
+        background-color: #fffbed;
+        border-radius: 2px;
+        padding: 2px 10px; }
+    .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fffbed;
+      text-transform: uppercase;
+      font-family: roboto;
+      padding: 5px; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color h3 {
+        font-weight: 800;
+        font-size: 1.2rem;
+        margin: 5px; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color span {
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color .activo {
+        border: 0.3rem solid #eca500;
+        width: 30px;
+        height: 30px; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color .blanco {
+        background-color: white; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color .rojo {
+        background-color: red; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color .negro {
+        background-color: black; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color .azul {
+        background-color: blue; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion .color .amarillo {
+        background-color: yellow; }
+    .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff002f;
+      border-radius: 4px;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #fffbed; }
+    .tarjeta .tarjeta2 .carousel-item .tarjeta__iconos a {
+      height: 2rem;
+      width: 2rem;
+      line-height: 2rem;
+      font-size: 1rem;
+      border: 0.05rem solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      margin: .3rem; }
+      .tarjeta .tarjeta2 .carousel-item .tarjeta__iconos a:hover {
+        background: #ff002f; }
+
 /* --------------------------------- 
 ------ Estilos de Cabecera  --------
 --------------------------------- */
@@ -207,46 +336,12 @@ h2 span {
       grid-column-end: 7; }
     .productos__listado-estructura {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 16rem));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+      gap: 1rem;
       align-items: flex-start;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       text-align: center;
       align-items: center; }
-      .productos__listado-estructura .tarjeta {
-        background-image: linear-gradient(163deg, #df0101 0%, #fb0000 100%);
-        border-radius: 20px;
-        transition: all .3s;
-        max-width: 15rem;
-        height: 23rem; }
-        .productos__listado-estructura .tarjeta:hover {
-          box-shadow: 0px 0px 30px 1px rgba(250, 0, 0, 0.418); }
-        .productos__listado-estructura .tarjeta .tarjeta2 {
-          background-color: #4d4d4d;
-          border-radius: 20px;
-          text-align: center;
-          max-width: 15rem;
-          height: 23rem; }
-          .productos__listado-estructura .tarjeta .tarjeta2:hover {
-            transform: scale(0.98);
-            border-radius: 20px; }
-          .productos__listado-estructura .tarjeta .tarjeta2 .d-block {
-            background-color: white;
-            border-radius: 20px 20px 0 0;
-            object-fit: scale-down;
-            height: 15rem; }
-          .productos__listado-estructura .tarjeta .tarjeta2 .carousel-item .tarjeta__descripcion p {
-            font-size: 1.2rem; }
-          .productos__listado-estructura .tarjeta .tarjeta2 .carousel-item .tarjeta__iconos a {
-            height: 2rem;
-            width: 2rem;
-            line-height: 2rem;
-            font-size: 1rem;
-            border: 0.05rem solid rgba(255, 255, 255, 0.1);
-            color: #fff;
-            margin: .3rem; }
-            .productos__listado-estructura .tarjeta .tarjeta2 .carousel-item .tarjeta__iconos a:hover {
-              background: #ff002f; }
 
 .btn {
   display: inline-block;
@@ -481,7 +576,7 @@ fieldset {
   margin-right: auto;
   margin-top: 1rem;
   margin-bottom: 100px;
-  background: #0a0a0a;
+  background: #161616;
   border-radius: 10px; }
 
 .contacto__legend {
@@ -512,7 +607,7 @@ fieldset {
   border: none;
   background: none;
   resize: none;
-  border-bottom: 1px solid #970000; }
+  border-bottom: 1px solid #ff002f; }
 
 .formulario button {
   background: #ff002f;
@@ -570,20 +665,6 @@ fieldset {
     width: 60%; }
     .informacion__maps .maps {
       width: 100%; }
-
-.contacto__rrss {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly; }
-
-.contacto__rrss_img {
-  background: #ff002f;
-  width: 200px; }
-
-.contacto__rrss_img:hover {
-  background: #4d4d4d;
-  width: 200px; }
 
 .enlace_rapido, footer .contenedor__contacto .info li i {
   display: inline-block;
