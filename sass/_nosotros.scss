@@ -2,9 +2,9 @@
 // ---- Estilos de Nosotros ---------
 // ----------------------------------
 
-#nuestra__historia{
+.nuestra__historia{
     display: flex;
-    background-color: $ColorTerciario;
+    background-color: transparent;
     border-radius: 10px;
     margin-bottom: 100px;
     .nh_item{
@@ -12,11 +12,12 @@
         position: relative;
         width: 25%;
         height: 70vh;
-        min-height: 600px;
-        color: #fff;
+        min-height: 300px;
         overflow: hidden;
         transition: width 0.5s ease;
-        border-radius: 10px;
+        border-radius: 20px;
+        margin: 15px;
+        border: 1px solid $ColorTexto;
         &:before,
         &:after {
             content: "";
@@ -27,7 +28,7 @@
             height: 100%;
         }
         &:after {
-            background: transparentize($bgCabecera, 0.15);
+            background: transparentize($bgCabecera, 0.5);
             opacity: 1;
             transition: opacity 0.5s ease;
         }
@@ -35,7 +36,7 @@
             background: linear-gradient(
                 to bottom,
                 rgba(0, 0, 0, 1) 10%,
-                rgba(0, 0, 0, 0.8) 40%
+                rgba(0, 0, 0, 0.85) 40%
             );
             z-index: 1;
             opacity: 0;
@@ -43,7 +44,7 @@
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
         &:hover {
-            width: 60%;
+            width: 80%;
             &:after {
                 opacity: 0;
             }
@@ -58,13 +59,37 @@
                 transition: all 0.75s ease 0.5s;
             }
             .nh_item__bg {
-                filter: grayscale(0);
+                filter: grayscale(100%);
                 object-fit: cover;
             }
             .nh_item__fecha{
-                background-color: $colorSecundario;
-                border-top: 1px solid $colorPrincipal;
-                border-bottom: 1px solid $colorPrincipal;
+                background-color: $colorPrincipal;
+                border-top: 1px solid $ColorTexto;
+                border-bottom: 1px solid $ColorTexto;
+                h3{
+                    color: $ColorTexto;
+                }
+            }
+        }
+        &__fecha {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            top: 10%;
+            left: 50%;
+            padding: 10px;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 1;
+            background-color: $ColorTexto;
+            border-top: 1px solid $colorPrincipal;
+            border-bottom: 1px solid $colorPrincipal;
+            h3 {
+                font-family: guitaluevo, Helvetica Neue, Helvetica, Arial,
+                sans-serif;
+                color: $bg;
+                font-size: 1.728rem;
+                margin: auto;
+                padding: auto;
             }
         }
         &__contenido {
@@ -76,29 +101,7 @@
             top: 20%;
             opacity: 0;
             p{
-                font-size: 1.3rem;
-            }
-        }
-
-        &__fecha {
-            position: absolute;
-            text-align: center;
-            width: 100%;
-            top: 10%;
-            left: 50%;
-            padding: 10px;
-            border-radius: 10px;
-            transform: translateX(-50%) translateY(-50%);
-            z-index: 1;
-            background-color: $colorPrincipal;
-            border-top: 1px solid #000;
-            border-bottom: 1px solid #000;
-            p {
-                font-family: guitaluevo, Helvetica Neue, Helvetica, Arial,
-                sans-serif;
-                color: $colorPrincipal;
-                font-size: 1.728rem;
-                line-height: 0;
+                font-size: 1.3em;
             }
         }
         .nh_item__bg {
@@ -112,7 +115,7 @@
             background-size: cover;
             background-position: center center;
             transition: filter 0.5s ease;
-            filter: grayscale(100%);
+            filter: grayscale(0);
         }
     }
 }

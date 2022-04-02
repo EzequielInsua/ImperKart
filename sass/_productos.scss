@@ -10,6 +10,7 @@
     justify-content: center;
     &__categoria{
         width: 25%;
+        min-width: 270px;
         margin-right: 50px;
         box-shadow: $box-shadow;
         padding: 15px 10px 15px 10px;

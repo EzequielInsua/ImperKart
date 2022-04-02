@@ -21,9 +21,9 @@
         text-transform: uppercase;
     }
     &__nav li a:hover{
-        color:$colorPrincipal;
+        color:$colorPrincipal !important;
         font-weight: bold;
-        background-color: black;
+        background-color: $bgCabecera;
     }
 }
 

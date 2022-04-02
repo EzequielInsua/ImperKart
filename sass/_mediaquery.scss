@@ -2,6 +2,13 @@
 //-------Responsive----------
 //---------------------------
 
+@media screen and (max-width:1151px){
+    .nh_item__contenido p{
+        font-size: 1.2em;
+    }
+}
+
+
 @media screen and (max-width:991px){
     .informacion{
         flex-direction: column;
@@ -13,35 +20,78 @@
             width: 100%;
         }
     }
+    .nuestra__historia{
+        .nh_item__contenido p{
+            font-size: 0.8em;
+        }
+    }
 }
 
 
-@media screen and (max-width:756px){
+@media screen and (max-width:768px){
     .navbar-nav{
-        background-color: black;
+        background-color: $bg;
         border-radius: 5px;
+        width: 100vw;
+        height: 100vh;
+        
     }
-    .enlace__activo{
-        color: $colorPrincipal;
-        border-bottom: none;
+    .cabecera__nav {
+        li a {
+        font-size: 2rem;
+        }
     }
     .categoria{
         width: 100%;
         margin-right: 50px;   
     }
-    .SeccionProductos{
+    .productos{
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__categoria{
+            width: 100%;
+        }
+        &__listado{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
-    .ContedorProductos{
+    .tarjeta{
+        width: 240px;
+        height: 400px;
+        .tarjeta2{
+            width: 240px;
+            height: 400px;
+            .carousel:after{
+                content: 'IMPER';
+                position: absolute;
+                top: 30%;
+                left: -5%;
+                font-size: 6em;
+                font-weight: 800;
+                font-family: guitaluevo;
+                color: rgba(66, 66, 66, 0.07);
+                rotate: -45deg;
+            }
+        }
+    }
+    .servicio__video{
         width: 100%;
     }
-    #nuestra__historia{
+    .nuestra__historia{
         flex-direction: column;
         .nh_item{
             width: 100%;
             &:hover{
                 width: 100%;
             }
+        }
+        .nh_item__contenido p{
+            font-size: 0.8rem;
         }
     }
     .nosotros__imagen{
@@ -59,6 +109,7 @@
         align-items: center;
         justify-content: space-between;
     }
+    
     .footer__nav{
         margin: 0;
         padding: 0;
@@ -96,3 +147,4 @@
         width: 100px;
     }
 }
+
