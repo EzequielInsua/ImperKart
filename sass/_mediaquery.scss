@@ -55,9 +55,6 @@
         }
         &__listado{
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
     }
     .tarjeta{
@@ -66,6 +63,10 @@
         .tarjeta2{
             width: 240px;
             height: 400px;
+            .d-block{
+                object-fit: scale-down;
+                height: 12rem;
+            }
             .carousel:after{
                 content: 'IMPER';
                 position: absolute;
