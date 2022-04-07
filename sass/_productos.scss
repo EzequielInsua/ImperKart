@@ -1,9 +1,6 @@
 // ---------------------------------
 // --- Estilos de Productos --------
 // ---------------------------------
-.productos_index{
-    margin-bottom: 100px;
-}
 .productos{
     display: flex;
     width: 100%;
@@ -63,24 +60,30 @@
             box-shadow: 0 1rem 1rem rgba(120, 62, 72, 0.2);
         }
     }
-    &__listado{
+    &__tarjetas{
         width: 75%;
-        &__h2{
+        .productos__listado{
+        &-h2{
             grid-column-start: 1;
             grid-column-end: 7;
         }
         &-estructura{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
             gap:1rem;
-            align-items:flex-start;
-            margin-bottom: 50px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
+            // align-items:flex-start;
+            // margin-bottom: 50px;
+            // text-align: center;
+            // align-items: center;
+            // justify-content: center;
+            }
         }
     }
 }
 .btn{
-    @include boton($colorPrincipal,$ColorTexto)
+    @include boton($colorPrincipal,$ColorTexto);
+    margin-bottom: 100px;
+}
+#pt-index{
+    width: 100%;
 }

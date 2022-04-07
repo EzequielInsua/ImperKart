@@ -101,7 +101,7 @@ h2 span {
 .tarjeta {
   border-radius: 20px;
   transition: all .3s;
-  width: 280px;
+  min-width: 240px;
   height: 450px;
   margin-bottom: 50px; }
   .tarjeta:hover {
@@ -109,7 +109,7 @@ h2 span {
   .tarjeta .tarjeta2 {
     border-radius: 20px;
     text-align: center;
-    width: 280px;
+    min-width: 240px;
     height: 450px;
     backdrop-filter: blur(0.2rem);
     background-color: rgba(255, 255, 255, 0.099);
@@ -311,11 +311,8 @@ h2 span {
   flex-direction: column;
   align-items: center;
   position: relative;
-  bottom: -5rem;
+  bottom: 0rem;
   width: 500px; }
-
-.productos_index {
-  margin-bottom: 100px; }
 
 .productos {
   display: flex;
@@ -368,20 +365,15 @@ h2 span {
       background-color: rgba(57, 57, 57, 0.06);
       border: 0.1rem solid rgba(255, 255, 255, 0.2);
       box-shadow: 0 1rem 1rem rgba(120, 62, 72, 0.2); }
-  .productos__listado {
+  .productos__tarjetas {
     width: 75%; }
-    .productos__listado__h2 {
+    .productos__tarjetas .productos__listado-h2 {
       grid-column-start: 1;
       grid-column-end: 7; }
-    .productos__listado-estructura {
+    .productos__tarjetas .productos__listado-estructura {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
-      gap: 1rem;
-      align-items: flex-start;
-      margin-bottom: 50px;
-      text-align: center;
-      align-items: center;
-      justify-content: center; }
+      grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
+      gap: 1rem; }
 
 .btn {
   display: inline-block;
@@ -396,7 +388,8 @@ h2 span {
   text-decoration: none;
   overflow: hidden;
   z-index: 1;
-  font-family: inherit; }
+  font-family: inherit;
+  margin-bottom: 100px; }
   .btn::before {
     content: "";
     position: absolute;
@@ -411,6 +404,9 @@ h2 span {
     z-index: -1; }
   .btn:hover::before {
     transform: translateX(0); }
+
+#pt-index {
+  width: 100%; }
 
 .servicios__contenido {
   margin-bottom: 100px;
