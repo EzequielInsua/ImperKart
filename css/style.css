@@ -502,7 +502,7 @@ h2 span {
       opacity: 0; }
       .nuestra__historia .nh_item__contenido p {
         font-size: 1.3em; }
-    .nuestra__historia .nh_item .nh_item__bg {
+    .nuestra__historia .nh_item__bg {
       transform: translate3d(0, 0, 0);
       position: absolute;
       width: 100%;
